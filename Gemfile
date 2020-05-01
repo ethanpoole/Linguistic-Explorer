@@ -52,6 +52,8 @@ gem 'font-awesome-sass', "~> 4.2.0"
 gem 'sass-rails', '~>3.2'
 # # Use Twitter Typeahead
 gem 'twitter-typeahead-rails', "~>0.10.5"
+# # Pie charts
+gem 'chartkick'
 
 # # Js libs
 # # jQuery

@@ -28,8 +28,9 @@
       - label = "#{ling.info < 100 ? ling.info < 50 ? 'Less than half' : 'Almost Complete' : 'Complete'}: #{percentage} %"
       %td{:class => "text-center"}
         .strong
-          %a{:href => "#", :rel => "tooltip", :title => label, :data => {:toggle => "tooltip", :placement => "left" } }
-            =icon number_to_icon_name(percentage), '', :class => "fa-2x #{number_to_text_class(percentage)}"
+          .center-pie
+            %a{:href => "#", :rel => "tooltip", :title => label, :data => {:toggle => "tooltip", :placement => "left" }}
+              = pie_chart [["green",percentage],["red",100-percentage]], height: "35px", width: "35px", colors: ['#00ff7f', '#ff6666'], dataset: {borderWidth: 0}, legend: false, library: {tooltips: {enabled: false}, hover: {mode: "null"}}
       - if current_group.has_depth?
         %td
           = (link_to ling.parent.name, group_ling_path(current_group, ling.parent)) if ling.parent

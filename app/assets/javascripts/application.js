@@ -13,3 +13,5 @@
 //= require tinymce-jquery
 //= require_tree ../templates
 //= require_tree .
+//= require chartkick
+//= require Chart.bundle
