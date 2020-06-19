@@ -75,8 +75,9 @@
               - percentage = @property.info
               - label = "#{percentage} %"
               %td{:class => "text-center"}
-                %a{:href => "#", :rel => "tooltip", :title => label, :data => {:toggle => "tooltip", :placement => "left" } }
-                  =icon number_to_icon_name(percentage), '', :class => "fa-15x #{number_to_text_class(percentage)}"
+                .center-pie
+                  %a{:href => "#", :rel => "tooltip", :title => label, :data => {:toggle => "tooltip", :placement => "left" } }
+                    = pie_chart [["green",percentage],["red",100-percentage]], height: "35px", width: "35px", colors: ['#00ff7f', '#ff6666'], dataset: {borderWidth: 0}, legend: false, library: {tooltips: {enabled: false}, hover: {mode: "null"}}
       .tab-pane#description
         .tabbed-pane
           .text-justify

@@ -23,8 +23,9 @@
         - label = "#{property.info < 100 ? property.info < 50 ? 'Less than half' : 'Almost Complete' : 'Complete'}: #{percentage} %"
         %td{:class => "text-center"}
           .strong
-            %a{:href => "#", :rel => "tooltip", :title => label, :data => {:toggle => "tooltip", :placement => "left" } }
-              =icon number_to_icon_name(percentage), '', :class => "fa-2x #{number_to_text_class(percentage)}"
+            .center-pie
+              %a{:href => "#", :rel => "tooltip", :title => label, :data => {:toggle => "tooltip", :placement => "left" } }
+                = pie_chart [["green",percentage],["red",100-percentage]], height: "35px", width: "35px", colors: ['#00ff7f', '#ff6666'], dataset: {borderWidth: 0}, legend: false, library: {tooltips: {enabled: false}, hover: {mode: "null"}}
         - if can_see_any? [:update,:destroy], property
           %td{:id => table_actions_id(property.name)}
             - if can_see? :update, property

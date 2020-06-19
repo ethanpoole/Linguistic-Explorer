@@ -84,6 +84,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    chartkick (2.3.5)
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
     chronic (0.10.2)
@@ -151,6 +152,8 @@ GEM
       activesupport (>= 3.1, < 4.1)
       haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
+    highcharts-rails (6.0.3)
+      railties (>= 3.1)
     highline (1.6.21)
     hike (1.2.3)
     hirb (0.7.2)
@@ -399,6 +402,7 @@ DEPENDENCIES
   capistrano (~> 2.15.4)
   capistrano-ext (~> 1.2.1)
   capybara (~> 2.7.1)
+  chartkick
   cucumber (~> 1.1.0)
   cucumber-rails
   d3-rails (~> 3.4.11)
@@ -407,6 +411,7 @@ DEPENDENCIES
   factory_girl_rails (~> 1.1)
   font-awesome-sass (~> 4.2.0)
   haml-rails (~> 0.4)
+  highcharts-rails
   hogan_assets (~> 1.6.0)
   humanizer (~> 2.6.0)
   iconv (~> 1.0.4)
