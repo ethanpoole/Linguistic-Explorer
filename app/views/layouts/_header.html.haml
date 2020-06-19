@@ -7,11 +7,11 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      = link_to 'TerraLing', root_url, :class => "navbar-brand logo-darker logo-font brand-bigger"
+      = link_to 'TerraLing', root_url, :style => "position:sticky; left:5px", :class => "navbar-brand logo-darker logo-font brand-bigger"
     // Navbar for wider screens
     #terraling-navbar-collapse.collapse.navbar-collapse
-      %ul.nav.navbar-nav
+      %ul.nav.navbar-nav{:style => "position:relative; left:5%"}
         = render :partial => 'layouts/group_nav_bar' unless Settings.in_preview
-      %ul.nav.navbar-nav.pull-right.user-nav
+      %ul.nav.navbar-nav.pull-right.user-nav{:style => "position:sticky; right:5%"}
         = render :partial => 'layouts/status_bar'
       %ul

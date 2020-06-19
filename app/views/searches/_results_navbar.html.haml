@@ -9,7 +9,7 @@
     // Navbar for wider screens
     #results-navbar-collapse.collapse.navbar-collapse
       = link_to 'Views', '#', :class => "navbar-brand"
-      %ul.nav.navbar-nav
+      %ul.nav.navbar-nav{:style => "position:relative"}
         %li.active
           = link_to '#', { :id => 'table', :rel => "tooltip", :title => "Table View", :data => {:toggle => "tooltip", :animation => "true"} } do
             = icon 'table', '', :class => "fa-15x"
@@ -19,7 +19,7 @@
         %li
           = link_to '#', { :id => 'vizit', :rel => "tooltip", :title => "Visualize it", :data => {:toggle => "tooltip", :animation => "true"} } do
             = icon 'photo', '', :class => "fa-15x"
-      %ul.nav.navbar-nav.pull-right
+      %ul.nav.navbar-nav.pull-right{:style => "position:sticky; right:5%"}
         %li
           - if user_has_any_role?
             = link_to '#', { :id => "downloadit", :rel => "tooltip", :title => "Download Results", :data => {:toggle => "tooltip", :animation => "true"} } do

@@ -45,7 +45,6 @@ i[class*=fa].fa-stack-1x:hover{
   font-style: italic;
 }
 
-
 .whitebox {
   background: rgba(245,245,245, 0.8);
   padding: 2%;
@@ -133,7 +132,8 @@ input.autocomplete {
         margin-top: 170px;
       }
     }
-  }
+  } 
+
   #property-setter {
     #prop-example {
       height: 150px;
@@ -532,7 +532,7 @@ td {
   margin-top: -2px;
   left:0;
   width: 100%;
-  min-height: 700px;
+  min-height: 200px;
   background: image-url("map_bg.gif") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -631,7 +631,7 @@ td {
   }
 
   h1 {
-    font-size: 8em;
+    font-size: 8vw;
     line-height:1.25em;
     color: #c30;
 
@@ -689,17 +689,30 @@ body {
   width: 96px;
   height: 96px;
 }
+#img {
+    @media screen and (max-width: 768px) {
+        about-img {
+            position: sticky;
+            left: 40%
+        }
+    }
+}
+
+
+
+
 
 .dropdown.black-dropdown > ul.dropdown-menu {
-  background-color: #333333;
+    background-color: #333333
+    ;
 
-  > li > a {
-    color: #fff;
+    > li > a {
+        color: #fff;
 
-    &:hover {
-      color: #000;
+        &:hover {
+            color: #000;
+        }
     }
-  }
 }
 .dropdown.black-dropdown > a.compact {
   padding: 0;
@@ -767,4 +780,8 @@ body {
 
 .leaflet-control-zoom-fit {
   font-size: 18px;
+}
+
+.pull-right {
+    padding-top: 5px;
 }
